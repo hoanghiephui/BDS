@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_tab2_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="#80483007">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="8.0dip"
+                android:text="aa"
+                android:textColor="@color/white1"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:gravity="center"
+                android:text="main_tab_2_sub_text"
+                android:textColor="@color/white1"
+                android:textSize="@dimen/text_xsmall" />
+
+            <ImageView
+                android:layout_width="11.0dip"
+                android:layout_height="11.0dip"
+                android:layout_marginLeft="-3.0dip"
+                android:layout_marginTop="2.0dip"
+                android:layout_toRightOf="@id/title"
+                android:src="@drawable/ic_title_new_12x12_nor_red" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:layout_gravity="bottom"
+        android:background="#80000000" />
+</LinearLayout>
