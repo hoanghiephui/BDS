@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="8.0dip"
-                android:text="saa"
+                android:text="@string/main_tab_1_text"
                 android:textColor="@color/white1"
                 android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="aa"
+                android:text="@string/main_tab_1_sub_text"
                 android:textColor="@color/white1"
                 android:textSize="@dimen/text_xsmall" />
         </LinearLayout>

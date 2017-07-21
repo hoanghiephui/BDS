@@ -24,7 +24,7 @@
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:paddingTop="8.0dip"
-                android:text="aa"
+                android:text="@string/main_tab_2_text"
                 android:textColor="@color/white1"
                 android:textSize="@dimen/text_medium"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
                 android:gravity="center"
-                android:text="main_tab_2_sub_text"
+                android:text="@string/main_tab_2_sub_text"
                 android:textColor="@color/white1"
                 android:textSize="@dimen/text_xsmall" />
 
