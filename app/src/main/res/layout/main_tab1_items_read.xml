@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 Hoang Hiep. 
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15.0dip"
+            android:src="@drawable/ic_title_oneroom_recent_24x24_nor_black" />
+
+        <FrameLayout
+            android:id="@id/btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:paddingRight="7.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="22.0dip"
+                android:text="더보기"
+                android:textColor="#ff757575"
+                android:textSize="@dimen/text_small" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:src="@drawable/ic_content_title_more_24x24_nor_black" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="47.0dip"
+            android:text="최근 본 방"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@id/layer_items"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@id/item1"
+                    layout="@layout/item_main_tab1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <View
+                    android:layout_width="6.0dip"
+                    android:layout_height="0.0dip" />
+
+                <include
+                    android:id="@id/item2"
+                    layout="@layout/item_main_tab1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <View
+                    android:layout_width="6.0dip"
+                    android:layout_height="0.0dip" />
+
+                <include
+                    android:id="@id/item3"
+                    layout="@layout/item_main_tab1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/layer_empty"
+                android:layout_width="fill_parent"
+                android:layout_height="78.0dip"
+                android:background="@drawable/main_tab_item_bg"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_content_default_oneroom_40x40_nor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="최근 본 방이 없습니다."
+                    android:textColor="#ff676767"
+                    android:textSize="@dimen/text_xsmall" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="#ffd6d6d6" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/main_tab_item_bg">
+
+        <LinearLayout
+            android:id="@+id/open"
+            android:layout_width="fill_parent"
+            android:layout_height="78.0dip"
+            android:orientation="vertical"
+            android:padding="1.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/agentImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:visibility="visible"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_content_default_oneroom_40x40_nor" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/close"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#b3000000"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_content_agent_unused_78x78_nor_white" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="@dimen/text_xsmall" />
+</LinearLayout>

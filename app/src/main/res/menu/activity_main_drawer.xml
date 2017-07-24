@@ -1,38 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/section1"
+            android:title="원룸, 투룸, 오피스텔/도시형생활주택">
+            <menu>
+                <item
+                    android:id="@+id/btn_drawer_item_recent"
+                    android:icon="@drawable/ic_title_oneroom_recent_24x24_nor_black"
+                    android:title="최근 본 방" />
+                <item
+                    android:id="@+id/btn_drawer_item_zzim"
+                    android:icon="@drawable/ic_title_oneroom_heart_24x24_nor_black"
+                    android:title="찜한 방" />
+                <item
+                    android:id="@+id/btn_drawer_favorite_agent"
+                    android:icon="@drawable/ic_title_agent_bookmark_24x24_nor_black"
+                    android:title="안심중개사 즐겨찾기" />
+                <item
+                    android:id="@+id/btn_drawer_item_sorry"
+                    android:icon="@drawable/ic_title_sale_call_24x24_nor_black"
+                    android:title="@string/menu_contact_room" />
+                <item
+                    android:id="@+id/btn_drawer_item_search"
+                    android:icon="@drawable/ic_title_search_number_24x24_nor_black"
+                    android:title="원룸 등록번호로 조회" />
+                <item
+                    android:id="@+id/btn_drawer_item_addroom"
+                    android:icon="@drawable/ic_title_sale_oneroom_24x24_nor_black"
+                    android:title="방 내놓기" />
+            </menu>
+        </item>
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/section2"
+            android:title="아파트">
+            <menu>
+                <item
+                    android:id="@+id/btn_drawer_danji_recent"
+                    android:icon="@drawable/ic_title_apt_recent_24x24_nor_black"
+                    android:title="최근 본 아파트" />
+                <item
+                    android:id="@+id/btn_drawer_danji_zzim"
+                    android:icon="@drawable/ic_title_apt_heart_24x24_nor_black"
+                    android:title="찜한 아파트" />
+                <item
+                    android:id="@+id/btn_drawer_danji_inquiry"
+                    android:icon="@drawable/ic_title_sale_call_24x24_nor_black"
+                    android:title="@string/menu_contact_apt_item" />
+                <item
+                    android:id="@+id/btn_drawer_danji_item_recent"
+                    android:icon="@drawable/ic_title_sale_recent_24x24_nor_black"
+                    android:title="@string/menu_recent_apt_item" />
+                <item
+                    android:id="@+id/btn_drawer_danji_item_search"
+                    android:icon="@drawable/ic_title_search_number_24x24_nor_black"
+                    android:title="@string/menu_search_apt_item" />
+                <item
+                    android:id="@+id/btn_drawer_danji_register"
+                    android:icon="@drawable/ic_title_sale_apt_24x24_nor_black"
+                    android:title="아파트 매물 내놓기" />
+            </menu>
+        </item>
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
+    <group
+        android:id="@+id/group_1"
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:id="@+id/btn_drawer_etc_support"
+            android:title="문의하기" />
+        <item
+            android:id="@+id/btn_drawer_etc_event"
+            android:title="이벤트 보기" />
+    </group>
 </menu>

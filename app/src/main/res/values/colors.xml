@@ -44,8 +44,8 @@
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="colorAccent">@android:color/black</color>
-    <color name="colorPrimary">@color/yellow1</color>
-    <color name="colorPrimaryDark">@color/yellow1</color>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
     <color name="com_facebook_blue">#ff3b5998</color>
     <color name="com_facebook_button_background_color">#ff415dae</color>
     <color name="com_facebook_button_background_color_disabled">#ffbdc1c9</color>
@@ -160,4 +160,7 @@
     <color name="white_transparent">#4cffffff</color>
     <color name="yellow1">#ffffa409</color>
     <color name="yellow2">#ffe59308</color>
+
+    <color name="default_indicator_color_selected">#eeee</color>
+    <color name="default_indicator_color_unselected">#66eeeeee</color>
 </resources>

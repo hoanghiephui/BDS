@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 Hoang Hiep.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="118.0dip"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="56.0dip"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:id="@+id/drawer_main_header_unsigned"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="21.0dip"
+                    android:paddingRight="21.0dip"
+                    android:text="@string/login"
+                    android:textColor="@color/white1"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/drawer_main_header_signed"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingLeft="18.0dip"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/drawer_main_header_tv_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0"
+                        android:paddingBottom="2.0dip"
+                        android:text="Hoang Hiep"
+                        android:textColor="@color/white1"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/drawer_main_header_tv_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0"
+                        android:text="hoanghiep.hui@gmail.com"
+                        android:textColor="@color/white1"
+                        android:textSize="@dimen/text_xsmall" />
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="43.0dip"
+            android:layout_height="43.0dip"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_noticenter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="9.0dip"
+                android:src="@drawable/ic_btn_noti_24x24_nor_white" />
+
+            <ImageView
+                android:id="@+id/ic_new"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="9.0dip"
+                android:src="@drawable/ic_btn_noti_active_24x24_nor_red" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/btn_setting"
+            android:layout_width="43.0dip"
+            android:layout_height="43.0dip"
+            android:layout_gravity="center"
+            android:padding="9.0dip"
+            android:src="@drawable/ic_btn_setting_24x24_nor_white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_gravity="center"
+        android:background="@color/white1" />
+
+    <LinearLayout
+        android:id="@+id/drawer_main_header_unsigned_signup"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip"
+        android:orientation="horizontal"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btn_normal_signup"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/normal_sign_up"
+            android:textColor="@color/white1"
+            android:textSize="@dimen/text_small" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="15.0dip"
+            android:layout_gravity="center"
+            android:background="@color/white1" />
+
+        <TextView
+            android:id="@+id/btn_agent_signup"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/agent_sign_up"
+            android:textColor="@color/white1"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+</LinearLayout>
