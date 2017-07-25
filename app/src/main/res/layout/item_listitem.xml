@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_background_color"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/image_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@id/img"
+                android:layout_width="@dimen/listitem_img_width_trust_agent"
+                android:layout_height="@dimen/listitem_img_height_trust_agent"
+                android:background="@color/white1"
+                android:scaleType="centerCrop"
+                app:failureImage="@drawable/list_ic_default"
+                app:failureImageScaleType="center"
+                app:placeholderImage="@drawable/list_ic_default"
+                app:placeholderImageScaleType="center" />
+
+            <TextView
+                android:id="@+id/soldout"
+                android:layout_width="@dimen/listitem_img_width_trust_agent"
+                android:layout_height="@dimen/listitem_img_height_trust_agent"
+                android:background="#84000000"
+                android:gravity="center"
+                android:text="@string/txt_soldout"
+                android:textColor="@color/white1"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ico_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img"
+                android:contentDescription="@string/txt_empty"
+                android:src="@drawable/ic_content_check_view_29x29_nor_white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip">
+
+            <android.support.v4.widget.Space
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/txt_title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:singleLine="true"
+                    android:text="@string/sample_title"
+                    android:textColor="@color/orange3"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ico_zzim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3.0dip"
+                    android:layout_weight="0.0"
+                    android:src="@drawable/ic_btn_heart_30x30_sel_red"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="0.0" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@id/txt_subtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:ellipsize="none"
+                android:singleLine="true"
+                android:text="강남역 헤링턴"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/text_msmall"
+                android:textStyle="bold" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@id/txt_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/sample_desc"
+                android:textColor="@color/grey2"
+                android:textSize="@dimen/text_msmall" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="2.0" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ico_junse"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="전세"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/multiplex"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="다세대/다가구"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/office"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="오피스텔·도생" />
+
+                <TextView
+                    android:id="@+id/apart"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="아파트"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/oneroom_open"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="원룸(오픈형)"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/oneroom_sep"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="원룸(분리형)"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/oneroom_multi"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="원룸(복층형)"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/tworoom"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="투룸"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/threeroom"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="쓰리룸+"
+                    android:textColor="@color/grey2" />
+
+                <TextView
+                    android:id="@+id/ico_direct"
+                    style="@style/ZigbangListIcon"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/listitem_label_common"
+                    android:text="직거래"
+                    android:textColor="@color/grey2"
+                    android:textSize="@dimen/text_xxsmall" />
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="10.0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/grey6" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/btn_location"
+    android:layout_width="wrap_content"
+    android:layout_height="36.0dip"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="10.0dip"
+    android:background="@drawable/btn_map_location"
+    android:drawableLeft="@drawable/ic_title_searchbar_oneroom_12x18_nor_black"
+    android:drawablePadding="8.0dip"
+    android:gravity="center_vertical"
+    android:paddingLeft="16.0dip"
+    android:paddingRight="16.0dip"
+    android:text="@string/map_search_location"
+    android:textColor="@color/brown2"
+    android:textSize="@dimen/text_msmall" />

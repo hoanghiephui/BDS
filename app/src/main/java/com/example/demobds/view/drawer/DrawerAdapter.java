@@ -109,8 +109,8 @@ public class DrawerAdapter implements NavigationView.OnNavigationItemSelectedLis
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 drawerCallback.getActivity(), drawerCallback.getDrawerLayout(), drawerCallback.getToolbar(), R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerCallback.getDrawerLayout().addDrawerListener(toggle);
-        this.drawerCallback.getNavigationView().setNavigationItemSelectedListener(this);
         toggle.syncState();
+        this.drawerCallback.getNavigationView().setNavigationItemSelectedListener(this);
         drawerCallback.getDrawerLayout().addDrawerListener(this);
         View view = drawerCallback.getNavigationView().getHeaderView(0);
         //unbinder = ButterKnife.bind(this, view);

@@ -52,30 +52,16 @@ import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends BaseActivity
-        implements ViewPager.OnPageChangeListener, DrawerAdapter.DrawerCallback {
+        implements ViewPager.OnPageChangeListener {
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.nav_view)
-    NavigationView navigationView;
-    @BindView(R.id.drawer_layout)
-    DrawerLayout drawer;
     @BindView(R.id.animationView)
     LottieAnimationView lottieAnimationView;
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
     @BindView(R.id.viewPager)
     ViewPager viewPager;
-    @BindView(R.id.container)
-    CoordinatorLayout mCoordinatorLayout;
-    @BindView(R.id.imgFooter)
-    ImageView imgFooter;
-    @BindView(R.id.versionText)
-    TextView versionTextView;
 
-    private MainPagerAdapter mainPagerAdapter;
-    private DrawerAdapter drawerAdapter;
 
     @Override
     protected int getLayoutID() {
@@ -96,9 +82,7 @@ public class MainActivity extends BaseActivity
     protected void initOnCreate(Bundle savedInstanceState) {
         setSupportActionBar(toolbar);
 
-        drawerAdapter = new DrawerAdapter(this);
-
-        mainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
+        MainPagerAdapter mainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mainPagerAdapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -113,19 +97,6 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onDestroyPresenter() {
         super.onDestroyPresenter();
-        if (drawerAdapter != null) {
-            drawerAdapter.onDestroyDrawer();
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 
     @Override
@@ -137,17 +108,18 @@ public class MainActivity extends BaseActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                return true;
+            case android.R.id.home:
+                if (drawer != null) {
+                    drawer.openDrawer(GravityCompat.START);  // OPEN DRAWER
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
 
-        return super.onOptionsItemSelected(item);
     }
 
     /////action click
@@ -206,53 +178,6 @@ public class MainActivity extends BaseActivity
     @Override
     public void onPageScrollStateChanged(int state) {
 
-    }
-
-    @Override
-    public BaseActivity getActivity() {
-        return this;
-    }
-
-    @Override
-    public User getUser() {
-        return null;
-    }
-
-    @Override
-    public DrawerLayout getDrawerLayout() {
-        return drawer;
-    }
-
-    @Override
-    public Toolbar getToolbar() {
-        return toolbar;
-    }
-
-    @Override
-    public NavigationView getNavigationView() {
-        return navigationView;
-    }
-
-    @Override
-    public ImageView getImageViewFooter() {
-        return imgFooter;
-    }
-
-    @Override
-    public TextView getVersionTextView() {
-        return versionTextView;
-    }
-
-    @Override
-    public void onDrawerOpened(boolean isOpen) {
-
-    }
-
-    @Override
-    public void onDrawerSlide(View drawerView, float slideOffset) {
-        if (mCoordinatorLayout != null) {
-            mCoordinatorLayout.setX(slideOffset * drawerView.getWidth());
-        }
     }
 
 }

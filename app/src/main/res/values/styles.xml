@@ -26,4 +26,27 @@
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splashbackground</item>
     </style>
+
+    <style name="ZigbangOrangeButton">
+        <item name="android:textSize">@dimen/text_xlarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_big_orange</item>
+        <item name="android:paddingLeft">25.0dip</item>
+        <item name="android:paddingRight">25.0dip</item>
+        <item name="android:layout_height">50.0dip</item>
+    </style>
+
+    <style name="ZigbangListIcon">
+        <item name="android:textSize">@dimen/text_xxsmall</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">2.0dip</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>

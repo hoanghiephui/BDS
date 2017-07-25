@@ -190,7 +190,4 @@
     <dimen name="default_dash_indicator_width">12dp</dimen>
     <dimen name="round_square_indicator_radius">2dp</dimen>
     <dimen name="max_slider_indicator_size">16dp</dimen>
-    <dimen name="text_msmall">10sp</dimen>
-    <dimen name="text_small">12sp</dimen>
-    <dimen name="text_bsmall">13sp</dimen>
 </resources>

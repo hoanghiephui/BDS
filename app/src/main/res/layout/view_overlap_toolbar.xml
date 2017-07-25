@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?colorPrimary"
+    android:minHeight="?actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <LinearLayout
+        android:id="@+id/search_location_button"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@drawable/selector_btn_danji_search"
+        android:gravity="center"
+        android:paddingRight="10.0dip">
+
+        <ImageView
+            android:layout_width="17.0dip"
+            android:layout_height="17.0dip"
+            android:layout_marginRight="3.0dip"
+            android:src="@drawable/ic_title_searchbar_17x17_nor_yellow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/map_search_location_danji"
+            android:textColor="@color/yellow1"
+            android:textSize="@dimen/text_msmall" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

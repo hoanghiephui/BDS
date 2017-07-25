@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white1"
+        app:contentPadding="-4.0dip">
+
+        <LinearLayout
+            android:id="@+id/item_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white1"
+            android:orientation="vertical">
+
+            <include layout="@layout/apt_list_item_top" />
+
+            <LinearLayout
+                android:id="@+id/item_bottom_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="65.0dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_weight="0.0"
+                    android:text="4억/84~"
+                    android:textColor="@color/black1"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="1.0dip"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_area_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="1403만"
+                            android:textColor="@color/black1"
+                            android:textSize="@dimen/text_xsmall" />
+
+                        <TextView
+                            android:id="@+id/txt_area_price_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="/3.3m2"
+                            android:textColor="@color/black1"
+                            android:textSize="@dimen/text_xsmall" />
+
+                        <TextView
+                            android:id="@+id/txt_price_changed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="7.0dip"
+                            android:drawableLeft="@drawable/ic_content_arrow_graphnone_10x10_nor_grey"
+                            android:drawablePadding="4.0dip"
+                            android:text="8% (+70만)"
+                            android:textSize="@dimen/text_xsmall" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_transaction_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.0"
+                        android:gravity="center_vertical"
+                        android:text="최근 거래내역 0"
+                        android:textColor="@color/black1"
+                        android:textSize="@dimen/text_xsmall" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/bottom_line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/grey6"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"
+        android:background="@color/grey8" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/grey6" />
+</LinearLayout>

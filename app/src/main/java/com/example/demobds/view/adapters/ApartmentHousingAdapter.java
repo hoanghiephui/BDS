@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.example.demobds.R;
 import com.example.demobds.models.BannerModel;
+import com.example.demobds.view.activity.BaseActivity;
 import com.example.demobds.view.viewholder.MainApartmentHousingNewsViewHolder;
 import com.example.demobds.view.viewholder.MainApartmentHousingReadViewHolder;
 import com.example.demobds.view.viewholder.MainApartmentHousingSnsViewHolder;
@@ -32,8 +33,10 @@ public class ApartmentHousingAdapter extends RecyclerView.Adapter<RecyclerView.V
             "http://static.panoramio.com/photos/large/132796981.jpg"
     };
     private List<BannerModel> list = new ArrayList<>();
+    private BaseActivity baseActivity;
 
-    public ApartmentHousingAdapter() {
+    public ApartmentHousingAdapter(BaseActivity baseActivity) {
+        this.baseActivity = baseActivity;
         for (String image : images) {
             BannerModel bannerModel = new BannerModel();
             bannerModel.setImageUrl(image);
@@ -66,7 +69,9 @@ public class ApartmentHousingAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (position == 1) {
+        if (position == 0) {
+            ((MainTabMenuViewHolder) holder).onBindViews(baseActivity);
+        } else if (position == 1) {
             ((MainBannerViewHolder) holder).onBindViews(list);
         } else if (position == 7) {
             ((MainBannerViewHolder) holder).onBindViews(list);

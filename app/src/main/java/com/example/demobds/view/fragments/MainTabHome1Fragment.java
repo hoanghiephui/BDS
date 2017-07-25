@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.demobds.R;
+import com.example.demobds.view.activity.BaseActivity;
 import com.example.demobds.view.adapters.ApartmentHousingAdapter;
 
 import butterknife.BindView;
@@ -37,7 +38,7 @@ public class MainTabHome1Fragment extends BaseFragment {
     @Override
     protected void bindEventHandlers(View view, Bundle savedInstanceState) {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        ApartmentHousingAdapter apartmentHousingAdapter = new ApartmentHousingAdapter();
+        ApartmentHousingAdapter apartmentHousingAdapter = new ApartmentHousingAdapter((BaseActivity)getActivity());
         recyclerView.setAdapter(apartmentHousingAdapter);
     }
 

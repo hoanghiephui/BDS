@@ -20,6 +20,8 @@ package com.example.demobds.view.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.demobds.view.activity.maps.SearchMapActivity;
+
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -28,6 +30,8 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
+
+import static com.example.demobds.ultis.IntentUltis.openMainActivity;
 
 /**
  * Created by hoanghiep on 7/22/17.
@@ -53,7 +57,7 @@ public class SplashActivity extends BaseActivity {
                 .subscribe(new Consumer<Object>() {
                     @Override
                     public void accept(Object o) throws Exception {
-                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        openMainActivity(SplashActivity.this);
                         finish();
                     }
                 });

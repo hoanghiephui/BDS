@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_bsmall">14.0sp</dimen>
+    <dimen name="text_large">21.0sp</dimen>
+    <dimen name="text_medium">16.0sp</dimen>
+    <dimen name="text_msmall">12.0sp</dimen>
+    <dimen name="text_small">13.0sp</dimen>
+    <dimen name="text_xlarge">25.0sp</dimen>
+    <dimen name="text_xsmall">11.0sp</dimen>
+    <dimen name="text_xxlarge">30.0sp</dimen>
+    <dimen name="text_xxsmall">9.0sp</dimen>
+    <dimen name="listitem_img_height">80.0dip</dimen>
+    <dimen name="listitem_img_width">110.0dip</dimen>
+</resources>
