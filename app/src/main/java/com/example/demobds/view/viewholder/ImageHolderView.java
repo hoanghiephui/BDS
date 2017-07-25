@@ -60,7 +60,6 @@ public class ImageHolderView implements Holder<BannerModel> {
 
     @Override
     public void UpdateUI(Context context, int position, BannerModel data) {
-        Log.d(TAG, "UpdateUI: " + data.getImageUrl());
         SimpleTarget<Bitmap> simpleTarget = new SimpleTarget<Bitmap>() {
             @Override
             public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {

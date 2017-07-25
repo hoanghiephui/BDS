@@ -38,4 +38,6 @@ dependencies {
     compile 'com.facebook.fresco:fresco:1.4.0'
     implementation project(':libbanner')
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+    compile "com.google.android.gms:play-services-maps:11.0.2"
+    compile 'pub.devrel:easypermissions:0.4.2'
 }

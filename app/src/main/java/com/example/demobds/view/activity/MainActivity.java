@@ -17,6 +17,7 @@
 
 package com.example.demobds.view.activity;
 
+import android.Manifest;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,11 +29,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.demobds.R;
@@ -40,12 +43,18 @@ import com.example.demobds.models.User;
 import com.example.demobds.view.adapters.MainPagerAdapter;
 import com.example.demobds.view.drawer.DrawerAdapter;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
+import pub.devrel.easypermissions.AfterPermissionGranted;
+import pub.devrel.easypermissions.AppSettingsDialog;
+import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends BaseActivity
         implements ViewPager.OnPageChangeListener, DrawerAdapter.DrawerCallback {
     private static final String TAG = MainActivity.class.getSimpleName();
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.nav_view)
@@ -245,4 +254,5 @@ public class MainActivity extends BaseActivity
             mCoordinatorLayout.setX(slideOffset * drawerView.getWidth());
         }
     }
+
 }
