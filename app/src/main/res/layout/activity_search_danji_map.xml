@@ -25,10 +25,10 @@
 
                 <include layout="@layout/view_overlap_toolbar" />
 
-                <!--<com.chbreeze.jikbang4a.app.view.filter.APTFilterBarView
-                    android:id="@id/filterBarView"
+                <com.example.demobds.view.widgets.filter.APTFilterBarView
+                    android:id="@+id/filterBarView"
                     android:layout_width="fill_parent"
-                    android:layout_height="38.0dip" />-->
+                    android:layout_height="38.0dip" />
 
                 <View
                     android:id="@+id/compat_line_view"

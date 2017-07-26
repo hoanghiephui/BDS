@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_btn_checkbox_checked_26x26_dim_grey" android:state_checked="true" android:state_enabled="false" />
+    <item android:drawable="@drawable/ic_btn_checkbox_26x26_dim_grey" android:state_enabled="false" />
+    <item android:drawable="@drawable/ic_btn_checkbox_checked_26x26_nor_yellow" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_btn_checkbox_checked_26x26_nor_yellow" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_btn_checkbox_checked_26x26_nor_yellow" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_btn_checkbox_26x26_nor_grey" />
+</selector>
