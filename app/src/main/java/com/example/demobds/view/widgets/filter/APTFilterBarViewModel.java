@@ -17,6 +17,8 @@
 
 package com.example.demobds.view.widgets.filter;
 
+import com.example.demobds.realm.dao.APTFilterDAO;
+
 import java.util.Map;
 
 import kotlin.jvm.internal.Intrinsics;
