@@ -1,2 +1,2 @@
-include ':app', ':library', ':libbanner'
+include ':app', ':library', ':libbanner', ':libraryMapsUtils'
 project(':library').projectDir = new File('submodule/library')

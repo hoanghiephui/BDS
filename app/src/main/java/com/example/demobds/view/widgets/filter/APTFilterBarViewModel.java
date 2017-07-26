@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 public final class APTFilterBarViewModel {
     private final String[] menuTypes = new String[]{"거래방법", "가격", "면적", "단지특징"};
 
-    private final String[] getMenuTitles() {
+    /*private final String[] getMenuTitles() {
         APTFilter var4 = APTFilterDAO.find();
         String var5 = var4.getDealTypeString();
         APTFilter.DealType var3 = var4.getDealType();
@@ -82,5 +82,5 @@ public final class APTFilterBarViewModel {
         }
 
         return new String[]{var5, var6, var7, "단지특징"};
-    }
+    }*/
 }
