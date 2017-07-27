@@ -30,57 +30,58 @@ import kotlin.jvm.internal.Intrinsics;
 public final class APTFilterBarViewModel {
     private final String[] menuTypes = new String[]{"거래방법", "가격", "면적", "단지특징"};
 
-    /*private final String[] getMenuTitles() {
-        APTFilter var4 = APTFilterDAO.find();
-        String var5 = var4.getDealTypeString();
-        APTFilter.DealType var3 = var4.getDealType();
+    public final String[] getMenuTitles() {
+        APTFilter aptFilter = APTFilterDAO.find();
+        String var5 = aptFilter.getDealTypeString();
+        APTFilter.DealType dealType = aptFilter.getDealType();
         int var1;
         int var2;
-        String var6;
-        switch(APTFilterBarViewModel$WhenMappings.$EnumSwitchMapping$0[var3.ordinal()]) {
-            case 1:
-                var1 = var4.getSalePriceLeft();
-                var2 = var4.getSalePriceRight();
+        String titleMenu;
+        switch (APTFilter.DealType.values()[dealType.ordinal()]) {
+            case RENT:
+                var1 = aptFilter.getSalePriceLeft();
+                var2 = aptFilter.getSalePriceRight();
                 if(var1 == 0 && var2 == ((Map)APTFilter.getAptSalePriceValues()).size() - 1) {
-                    var6 = "전체가격";
+                    titleMenu = "전체가격";
                 } else if(var1 == 0 && var2 != ((Map)APTFilter.getAptSalePriceValues()).size() - 1) {
-                    var6 = (String)APTFilter.getAptSalePriceValues().get(Integer.valueOf(var2));
-                    var6 = var6 + APTFilter.getUnitPriceUk() + " 까지";
+                    titleMenu = (String)APTFilter.getAptSalePriceValues().get(var2);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk() + " 까지";
                 } else if(var1 == var2) {
-                    var6 = (String)APTFilter.getAptSalePriceValues().get(Integer.valueOf(var2));
-                    var6 = var6 + APTFilter.getUnitPriceUk();
+                    titleMenu = (String)APTFilter.getAptSalePriceValues().get(var2);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk();
                 } else {
-                    var6 = (String)APTFilter.getAptSalePriceValues().get(Integer.valueOf(var1));
-                    var6 = var6 + APTFilter.getUnitPriceUk() + " 부터";
+                    titleMenu = (String)APTFilter.getAptSalePriceValues().get(var1);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk() + " 부터";
                 }
                 break;
-            case 2:
-                var1 = var4.getRentDepositLeft();
-                var2 = var4.getRentDepositRight();
+            case SALES:
+                var1 = aptFilter.getRentDepositLeft();
+                var2 = aptFilter.getRentDepositRight();
                 if(var1 == 0 && var2 == ((Map)APTFilter.getAptRentDepositPriceValues()).size() - 1) {
-                    var6 = "전체가격";
+                    titleMenu = "전체가격";
                 } else if(var1 == 0 && var2 != ((Map)APTFilter.getAptRentDepositPriceValues()).size() - 1) {
-                    var6 = (String)APTFilter.getAptRentDepositPriceValues().get(Integer.valueOf(var2));
-                    var6 = var6 + APTFilter.getUnitPriceUk() + " 까지";
+                    titleMenu = (String)APTFilter.getAptRentDepositPriceValues().get(var2);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk() + " 까지";
                 } else if(var1 == var2) {
-                    var6 = (String)APTFilter.getAptRentDepositPriceValues().get(Integer.valueOf(var2));
-                    var6 = var6 + APTFilter.getUnitPriceUk();
+                    titleMenu = (String)APTFilter.getAptRentDepositPriceValues().get(var2);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk();
                 } else {
-                    var6 = (String)APTFilter.getAptRentDepositPriceValues().get(Integer.valueOf(var1));
-                    var6 = var6 + APTFilter.getUnitPriceUk() + " 부터";
+                    titleMenu = (String)APTFilter.getAptRentDepositPriceValues().get(var1);
+                    titleMenu = titleMenu + APTFilter.getUnitPriceUk() + " 부터";
                 }
                 break;
             default:
-                var6 = "";
+                titleMenu = "";
+                break;
         }
 
         String var7;
-        if(var4.getSelectedSizeIndex().size() == ((Object[])APTFilter.getAptSizeValues()).length) {
+        if(aptFilter.getSelectedSizeIndex().size() == ((Object[])APTFilter.getAptSizeValues()).length) {
             var7 = "전체면적";
         } else {
-            var7 = var4.getSelectedSizeIndex().size() + "개 면적대";
+            var7 = aptFilter.getSelectedSizeIndex().size() + "개 면적대";
         }
 
-        return new String[]{var5, var6, var7, "단지특징"};
-    }*/
+        return new String[]{var5, titleMenu, var7, "단지특징"};
+    }
 }

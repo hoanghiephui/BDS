@@ -46,6 +46,7 @@ dependencies {
     compile 'org.jetbrains:annotations:15.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation project(':libraryMapsUtils')
+    compile 'com.edmodo:rangebar:1.0.0'
 }
 repositories {
     mavenCentral()

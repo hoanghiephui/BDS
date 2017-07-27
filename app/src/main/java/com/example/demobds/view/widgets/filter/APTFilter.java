@@ -181,6 +181,36 @@ public class APTFilter {
         this.dealType = var1;
     }
 
+    public final int getRentDepositLeft() {
+        int var1;
+        if(this.rentDepositLeft == getAptRentDepositPriceValues().size() - 1 && this.getRentDepositRight() == getAptRentDepositPriceValues().size() - 1) {
+            var1 = 0;
+        } else {
+            var1 = Math.min(this.rentDepositLeft, getAptRentDepositPriceValues().size() - 1);
+        }
+
+        return var1;
+    }
+
+    public final int getRentDepositRight() {
+        return Math.min(this.rentDepositRight, getAptRentDepositPriceValues().size() - 1);
+    }
+
+    public final int getSalePriceLeft() {
+        int var1;
+        if(this.salePriceLeft == getAptSalePriceValues().size() - 1 && this.getSalePriceRight() == getAptSalePriceValues().size() - 1) {
+            var1 = 0;
+        } else {
+            var1 = Math.min(this.salePriceLeft, getAptSalePriceValues().size() - 1);
+        }
+
+        return var1;
+    }
+
+    public final int getSalePriceRight() {
+        return Math.min(this.salePriceRight, getAptSalePriceValues().size() - 1);
+    }
+
     public static final class APTFilterSizeRange {
         @NotNull
         private final APTFilter.APTFilterSizeData end;
